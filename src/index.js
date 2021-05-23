@@ -54,7 +54,7 @@ function searchEventHandler(e) {
   const filteredAppState = appState.filter(
     (user) =>
       user.name.toLowerCase().includes(searchInput.value.toLowerCase()) ||
-      user.gender.toLowerCase().includes(searchInput.value.toLowerCase()) ||
+      user.gender.toLowerCase() === searchInput.value.toLowerCase() ||
       user.email.toLowerCase().includes(searchInput.value.toLowerCase())
   );
   renderUserList(filteredAppState);
